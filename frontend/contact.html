@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Vihaan Agro Overseas</title>
+  <meta name="description" content="Get in touch with Vihaan Agro Overseas for premium red onion exports. Call 9096886307 or email shaikhtouhid9229@gmail.com.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              50: '#fdf7f8',
+              100: '#fbebed',
+              200: '#f6d3d7',
+              600: '#a3283b',
+              800: '#5C132B',
+              950: '#2A0611',
+            },
+            gold: {
+              400: '#E5C060',
+              500: '#D4AF37',
+              600: '#B89326',
+            },
+            charcoal: {
+              800: '#1A1213',
+              900: '#0F090A',
+            }
+          },
+          fontFamily: {
+            sans: ['"Outfit"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #2A0611; }
+    ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #B89326; }
+    
+    .fade-in-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-on-scroll.appear { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-burgundy-50 font-sans text-charcoal-900 overflow-x-hidden">
+
+  <!-- Header Section -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-burgundy-100/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2 group">
+          <div class="w-10 h-10 bg-gradient-to-br from-gold-500 to-burgundy-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-burgundy-950 font-extrabold text-lg tracking-wider font-serif">VIHAAN AGRO</span>
+            <span class="text-gold-600 font-bold text-xs tracking-widest -mt-1">OVERSEAS</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-burgundy-950/80">
+          <a href="index.html" class="hover:text-gold-600 transition duration-300">Home</a>
+          <a href="about.html" class="hover:text-gold-600 transition duration-300">About Us</a>
+          <a href="shop.html" class="hover:text-gold-600 transition duration-300">Shop</a>
+          <a href="quality.html" class="hover:text-gold-600 transition duration-300">Quality</a>
+          <a href="contact.html" class="text-gold-600 font-bold transition duration-300">Contact</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="contact.html" class="text-xs bg-gold-500 hover:bg-gold-600 text-burgundy-950 px-5 py-2.5 rounded-full font-extrabold shadow-lg shadow-gold-500/10 transition duration-300">
+            Get Quote
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-burgundy-950 hover:text-gold-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-burgundy-100 px-4 pt-2 pb-6 space-y-3">
+      <a href="index.html" class="block text-burgundy-950 hover:text-gold-600 text-lg font-medium py-2">Home</a>
+      <a href="about.html" class="block text-burgundy-950 hover:text-gold-600 text-lg font-medium py-2">About Us</a>
+      <a href="shop.html" class="block text-burgundy-950 hover:text-gold-600 text-lg font-medium py-2">Shop</a>
+      <a href="quality.html" class="block text-burgundy-950 hover:text-gold-600 text-lg font-medium py-2">Quality</a>
+      <a href="contact.html" class="block text-gold-600 font-bold text-lg py-2">Contact</a>
+      <div class="flex flex-col gap-3 pt-4 border-t border-burgundy-100">
+        <a href="contact.html" class="w-full text-center bg-gold-500 hover:bg-gold-600 text-burgundy-950 py-3 rounded-full font-extrabold">
+          Get Quote
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="bg-gradient-to-r from-burgundy-950 via-burgundy-900 to-burgundy-950 text-white pt-36 pb-20 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-white/5 opacity-10 z-0"></div>
+    <div class="max-w-4xl mx-auto px-4 z-10 relative space-y-4">
+      <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Establish Connection</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-serif">Contact Our Team</h1>
+      <p class="text-white/70 max-w-2xl mx-auto font-light text-sm sm:text-base leading-relaxed">
+        Let us coordinate your red onion shipping volume, packaging mesh sizing, and port delivery schedules.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Us Content -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16">
+        
+        <!-- Contact Form Card -->
+        <div class="bg-burgundy-50 border border-burgundy-100 rounded-3xl p-8 shadow-xl fade-in-on-scroll">
+          <h3 class="text-2xl font-bold font-serif text-burgundy-800">Send an Inquiry</h3>
+          <p class="text-xs text-charcoal-800/60 mt-1 mb-6 font-light">Fill in your cargo targets, packaging choices, and target discharge ports.</p>
+          
+          <form id="contact-form" class="space-y-4" onsubmit="handleInquiry(event)">
+            <div>
+              <label class="block text-xs font-semibold text-charcoal-800/80 uppercase tracking-wider mb-1.5">Full Name / Corporate Entity</label>
+              <input type="text" required class="w-full px-4 py-2.5 rounded-xl border border-burgundy-200 focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm bg-white" placeholder="Importing Firm Ltd">
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-charcoal-800/80 uppercase tracking-wider mb-1.5">Email ID</label>
+                <input type="email" required class="w-full px-4 py-2.5 rounded-xl border border-burgundy-200 focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm bg-white" placeholder="shaikhtouhid9229@gmail.com">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-charcoal-800/80 uppercase tracking-wider mb-1.5">Contact Number</label>
+                <input type="tel" required class="w-full px-4 py-2.5 rounded-xl border border-burgundy-200 focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm bg-white" placeholder="9096886307">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-charcoal-800/80 uppercase tracking-wider mb-1.5">Target Onion Variety</label>
+              <select class="w-full px-4 py-2.5 rounded-xl border border-burgundy-200 focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm bg-white">
+                <option>Fresh Red Onions (30-55mm+)</option>
+                <option>Dehydrated Red Onion Flakes</option>
+                <option>Fine Red Onion Powder</option>
+                <option>Onion Seeds (Kalonji)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-charcoal-800/80 uppercase tracking-wider mb-1.5">Message / Shipment Details</label>
+              <textarea rows="4" required class="w-full px-4 py-2.5 rounded-xl border border-burgundy-200 focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm bg-white resize-none" placeholder="Provide cargo specifications or export requirements..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-burgundy-800 hover:bg-gold-500 text-white hover:text-burgundy-950 py-3.5 rounded-xl font-bold transition duration-300 shadow-md">
+              Submit Global Inquiry
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info Details -->
+        <div class="space-y-8 fade-in-on-scroll flex flex-col justify-center text-left">
+          <div class="space-y-2">
+            <span class="text-xs uppercase font-extrabold tracking-widest text-burgundy-600 bg-burgundy-100 px-3 py-1 rounded-full">Sourcing Base</span>
+            <h2 class="text-3xl font-bold font-serif text-burgundy-800 mt-2">Export Sourcing Offices</h2>
+            <p class="text-charcoal-800/70 font-light text-sm">Our primary processing and packing centers operate in close proximity to major growing blocks in Nashik.</p>
+          </div>
+          
+          <div class="space-y-6">
+            <!-- Address -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-gold-500/10 rounded-full flex items-center justify-center text-gold-600 shrink-0 border border-gold-500/30">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-burgundy-800 font-serif">Corporate Headquarters Address</h4>
+                <p class="text-xs text-charcoal-800/70 mt-1 max-w-sm leading-relaxed">
+                  Gat No 188 Rajaram Jagnnalh Catkal, At Post Materewadi, Taluka Dhdori, Pimpalgaoa Bos'rant, 422209, NASHIK MAHARASHTRA
+                </p>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-gold-500/10 rounded-full flex items-center justify-center text-gold-600 shrink-0 border border-gold-500/30">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-burgundy-800 font-serif">Direct Sourcing Line</h4>
+                <p class="text-sm font-semibold text-charcoal-800 mt-1">
+                  <a href="tel:9096886307" class="hover:text-gold-500 transition duration-300">+91 9096886307</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-gold-500/10 rounded-full flex items-center justify-center text-gold-600 shrink-0 border border-gold-500/30">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-burgundy-800 font-serif">Corporate Email</h4>
+                <p class="text-sm font-semibold text-charcoal-800 mt-1">
+                  <a href="mailto:shaikhtouhid9229@gmail.com" class="hover:text-gold-500 transition duration-300">shaikhtouhid9229@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            
+            <!-- Operating Hours -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-gold-500/10 rounded-full flex items-center justify-center text-gold-600 shrink-0 border border-gold-500/30">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-burgundy-800 font-serif">Trade Desk Hours</h4>
+                <p class="text-xs text-charcoal-800/70 mt-1">Mon - Sat: 9:00 AM - 6:00 PM (IST)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="pb-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-burgundy-50 border border-burgundy-100 rounded-3xl overflow-hidden shadow-xl p-4 fade-in-on-scroll">
+        <div class="flex items-center space-x-3 mb-4 px-4 pt-2">
+          <div class="w-8 h-8 bg-gold-500/10 rounded-full flex items-center justify-center text-gold-600 border border-gold-500/30">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold font-serif text-burgundy-800">Our Location on Map</h3>
+            <p class="text-xs text-charcoal-800/60 font-light">Find us at our main headquarters in Nashik, Maharashtra</p>
+          </div>
+        </div>
+        <div class="w-full h-[450px] rounded-2xl overflow-hidden border border-burgundy-200/50">
+          <iframe 
+            src="https://maps.google.com/maps?q=Gat%20No%20188%20Rajaram%20Jagnnalh%20Catkal%20At%20Post%20Materewadi%20Taluka%20Dhdori%20Pimpalgaoa%20Bos'rant%20422209%20NASHIK%20MAHARASHTRA&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+            class="w-full h-full border-0" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-burgundy-950 text-white border-t border-burgundy-800/50 py-16 relative overflow-hidden">
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-gold-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute -top-24 -right-24 w-80 h-80 bg-burgundy-800/10 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 z-10 relative text-left">
+      <!-- Col 1: Brand -->
+      <div class="space-y-4">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-br from-gold-500 to-burgundy-600 rounded-full flex items-center justify-center shadow-lg text-white font-bold">V</div>
+          <div class="flex flex-col">
+            <span class="font-serif font-extrabold text-base tracking-wider text-white">VIHAAN AGRO</span>
+            <span class="text-gold-500 font-bold text-[10px] tracking-widest -mt-1">OVERSEAS</span>
+          </div>
+        </div>
+        <p class="text-xs text-white/60 leading-relaxed font-light">
+          Premium Red Onion exporters based in Nashik, Maharashtra. Catering to international food industries, processors, and retailers worldwide.
+        </p>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-gold-400 font-serif">Quick Links</h4>
+        <ul class="space-y-2 text-xs text-white/70">
+          <li><a href="index.html" class="hover:text-gold-400 transition duration-300">Home</a></li>
+          <li><a href="about.html" class="hover:text-gold-400 transition duration-300">About Us</a></li>
+          <li><a href="shop.html" class="hover:text-gold-400 transition duration-300">Shop</a></li>
+          <li><a href="quality.html" class="hover:text-gold-400 transition duration-300">Quality Standards</a></li>
+          <li><a href="contact.html" class="hover:text-gold-400 transition duration-300">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Trade Reg Info -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-gold-400 font-serif">Corporate Details</h4>
+        <div class="space-y-2.5 text-xs text-white/70">
+          <p><span class="text-white/40 block uppercase text-[10px] font-semibold">GSTIN Registration</span> 27BEHPG8089P1ZL</p>
+          <p><span class="text-white/40 block uppercase text-[10px] font-semibold">IEC Code</span> BEHPG8089P</p>
+          <p><span class="text-white/40 block uppercase text-[10px] font-semibold">Authorized Owner</span> Gatkal Mangesh Raiaram</p>
+        </div>
+      </div>
+
+      <!-- Col 4: Operations Address -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-gold-400 font-serif">Headquarters</h4>
+        <div class="space-y-2.5 text-xs text-white/70">
+          <p class="leading-relaxed">
+            Gat No 188 Rajaram Jagnnalh Catkal, At Post Materewadi, Taluka Dhdori, Pimpalgaoa Bos'rant, 422209, NASHIK MAHARASHTRA
+          </p>
+          <p><span class="text-white/40 uppercase text-[10px] font-semibold mr-1">Phone:</span> <a href="tel:9096886307" class="hover:text-gold-400 transition duration-300">+91 9096886307</a></p>
+          <p><span class="text-white/40 uppercase text-[10px] font-semibold mr-1">Email:</span> <a href="mailto:shaikhtouhid9229@gmail.com" class="hover:text-gold-400 transition duration-300">shaikhtouhid9229@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom copyright bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-white/40 gap-4 z-10 relative">
+      <p>&copy; 2026 Vihaan Agro Overseas. All rights reserved.</p>
+      <p>Quality Guaranteed &bull; Nashik Red Onion Sourcing</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Our Products | Vihaan Agro Overseas</title>
+  <meta name="description"
+    content="Browse premium red onions, dehydrated onion flakes, red onion powder, and selected onion seeds exported globally by Vihaan Agro Overseas.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              50: '#fdf7f8',
+              100: '#fbebed',
+              200: '#f6d3d7',
+              600: '#a3283b',
+              800: '#5C132B',
+              950: '#2A0611',
+            },
+            gold: {
+              400: '#E5C060',
+              500: '#D4AF37',
+              600: '#B89326',
+            },
+            charcoal: {
+              800: '#1A1213',
+              900: '#0F090A',
+            }
+          },
+          fontFamily: {
+            sans: ['"Outfit"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #2A0611;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #D4AF37;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B89326;
+    }
+
+    .fade-in-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in-on-scroll.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-burgundy-50 font-sans text-charcoal-900 overflow-x-hidden">
+
+  <!-- Header Section -->
+  <header id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-burgundy-100/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2 group">
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-gold-500 to-burgundy-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-burgundy-950 font-extrabold text-lg tracking-wider font-serif">VIHAAN AGRO</span>
+            <span class="text-gold-600 font-bold text-xs tracking-widest -mt-1">OVERSEAS</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-burgundy-950/80">
+          <a href="index.html" class="hover:text-gold-600 transition duration-300">Home</a>
+          <a href="about.html" class="hover:text-gold-600 transition duration-300">About Us</a>
+          <a href="shop.html" class="text-gold-600 font-bold transition duration-300">Shop</a>
+          <a href="quality.html" class="hover:text-gold-600 transition duration-300">Quality</a>
+          <a href="contact.html" class="hover:text-gold-600 transition duration-300">Contact</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="contact.html"
+            class="text-xs bg-gold-500 hover:bg-gold-600 text-burgundy-950 px-5 py-2.5 rounded-full font-extrabold shadow-lg shadow-gold-500/10 transition duration-300">
+            Get Quote
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-burgundy-950 hover:text-gold-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-burgundy-100 px-4 pt-2 pb-6 space-y-3">
+      <a href="index.html" class="block text-burgundy-950 hover:text-gold-600 text-lg font-medium py-2">Home</a>
+      <a href="about.html" class="block text-burgundy-950 hover:text-gold-600 text-lg font-medium py-2">About Us</a>
+      <a href="shop.html" class="block text-gold-600 font-bold text-lg py-2">Shop</a>
+      <a href="quality.html" class="block text-burgundy-950 hover:text-gold-600 text-lg font-medium py-2">Quality</a>
+      <a href="contact.html" class="block text-burgundy-950 hover:text-gold-600 text-lg font-medium py-2">Contact</a>
+      <div class="flex flex-col gap-3 pt-4 border-t border-burgundy-100">
+        <a href="contact.html"
+          class="w-full text-center bg-gold-500 hover:bg-gold-600 text-burgundy-950 py-3 rounded-full font-extrabold">
+          Get Quote
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section
+    class="bg-gradient-to-r from-burgundy-950 via-burgundy-900 to-burgundy-950 text-white pt-36 pb-20 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-white/5 opacity-10 z-0"></div>
+    <div class="max-w-4xl mx-auto px-4 z-10 relative space-y-4">
+      <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Premium Export Catalogue</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-serif">Shop Onion &amp; Spices</h1>
+      <p class="text-white/70 max-w-2xl mx-auto font-light text-sm sm:text-base leading-relaxed">
+        Select from our collection of premium agricultural grade commodities sorted, packaged, and preserved for global
+        marine transport.
+      </p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid md:grid-cols-2 gap-x-12 gap-y-24 pb-20">
+
+        <!-- Product 1: Fresh Red Onions -->
+        <div class="relative group">
+          <div
+            class="overflow-hidden rounded-[2rem] aspect-[4/3] w-full bg-burgundy-50 shadow-md border border-burgundy-100/30">
+            <img src="images/red_onions.png" alt="Fresh Red Onions"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div
+            class="mx-6 -mt-20 relative bg-[#FFF9EA] rounded-[1.8rem] p-6 shadow-xl border border-burgundy-100/40 text-center flex flex-col justify-between min-h-[250px]">
+            <div class="space-y-3">
+              <h3 class="text-xl font-bold font-serif text-burgundy-950 flex items-center justify-center gap-2">
+                <span>🧅</span> Fresh Red Onions
+              </h3>
+              <p class="text-xs text-charcoal-800/80 font-light leading-relaxed">
+                Premium Nashik red onions featuring multi-layered crimson papery skins, high pungency levels. Size
+                30-55mm+, moisture &lt; 12%. Sacks packing in 10kg/25kg/50kg mesh.
+              </p>
+            </div>
+            <div class="pt-4">
+              <button onclick="openModal('Fresh Red Onions')"
+                class="bg-[#c29143] hover:bg-[#a97b32] text-white font-bold rounded-full px-8 py-2.5 text-xs tracking-wider transition-all duration-300 hover:scale-105 inline-block shadow-md">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Dehydrated Onion Flakes -->
+        <div class="relative group">
+          <div
+            class="overflow-hidden rounded-[2rem] aspect-[4/3] w-full bg-burgundy-50 shadow-md border border-burgundy-100/30">
+            <img src="images/onion_flakes.png" alt="Dehydrated Onion Flakes"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div
+            class="mx-6 -mt-20 relative bg-[#FFF9EA] rounded-[1.8rem] p-6 shadow-xl border border-burgundy-100/40 text-center flex flex-col justify-between min-h-[250px]">
+            <div class="space-y-3">
+              <h3 class="text-xl font-bold font-serif text-burgundy-950 flex items-center justify-center gap-2">
+                <span>🥣</span> Dehydrated Onion Flakes
+              </h3>
+              <p class="text-xs text-charcoal-800/80 font-light leading-relaxed">
+                Processed in hygienic facilities using fresh-slipped pink and red onions. Uniform cuts (10-15mm),
+                moisture-controlled (&lt; 6.5%). Standard 14kg cartons with inner polybags.
+              </p>
+            </div>
+            <div class="pt-4">
+              <button onclick="openModal('Dehydrated Onion Flakes')"
+                class="bg-[#c29143] hover:bg-[#a97b32] text-white font-bold rounded-full px-8 py-2.5 text-xs tracking-wider transition-all duration-300 hover:scale-105 inline-block shadow-md">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Dehydrated Red Onion Powder -->
+        <div class="relative group">
+          <div
+            class="overflow-hidden rounded-[2rem] aspect-[4/3] w-full bg-burgundy-50 shadow-md border border-burgundy-100/30">
+            <img src="images/onion_powder.png" alt="Onion Powder"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div
+            class="mx-6 -mt-20 relative bg-[#FFF9EA] rounded-[1.8rem] p-6 shadow-xl border border-burgundy-100/40 text-center flex flex-col justify-between min-h-[250px]">
+            <div class="space-y-3">
+              <h3 class="text-xl font-bold font-serif text-burgundy-950 flex items-center justify-center gap-2">
+                <span>🧂</span> Dehydrated Onion Powder
+              </h3>
+              <p class="text-xs text-charcoal-800/80 font-light leading-relaxed">
+                Milled from dried onions into fine, free-flowing pink-crimson powder. 80-100 mesh grade. Zero artificial
+                dye. Packed in 20kg/25kg Kraft paper bags with poly-liner.
+              </p>
+            </div>
+            <div class="pt-4">
+              <button onclick="openModal('Dehydrated Red Onion Powder')"
+                class="bg-[#c29143] hover:bg-[#a97b32] text-white font-bold rounded-full px-8 py-2.5 text-xs tracking-wider transition-all duration-300 hover:scale-105 inline-block shadow-md">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Onion Seeds (Kalonji) -->
+        <div class="relative group">
+          <div
+            class="overflow-hidden rounded-[2rem] aspect-[4/3] w-full bg-burgundy-50 shadow-md border border-burgundy-100/30">
+            <img src="images/onion_seeds.png" alt="Onion Seeds Kalonji"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div
+            class="mx-6 -mt-20 relative bg-[#FFF9EA] rounded-[1.8rem] p-6 shadow-xl border border-burgundy-100/40 text-center flex flex-col justify-between min-h-[250px]">
+            <div class="space-y-3">
+              <h3 class="text-xl font-bold font-serif text-burgundy-950 flex items-center justify-center gap-2">
+                <span>🌱</span> Onion Seeds
+              </h3>
+              <p class="text-xs text-charcoal-800/80 font-light leading-relaxed">
+                Also known as Nigella seeds, our selected onion seeds are thoroughly cleaned, sifted to remove dust and
+                weed seeds (admixture &lt; 0.5%). Germination rate &gt; 85%.
+              </p>
+            </div>
+            <div class="pt-4">
+              <button onclick="openModal('Onion Seeds')"
+                class="bg-[#c29143] hover:bg-[#a97b32] text-white font-bold rounded-full px-8 py-2.5 text-xs tracking-wider transition-all duration-300 hover:scale-105 inline-block shadow-md">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: Nashik Farm Fresh Onion -->
+        <div class="relative group">
+          <div
+            class="overflow-hidden rounded-[2rem] aspect-[4/3] w-full bg-burgundy-50 shadow-md border border-burgundy-100/30">
+            <img src="images/img.webp" alt="Nashik Farm Fresh Onion Sourcing"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div
+            class="mx-6 -mt-20 relative bg-[#FFF9EA] rounded-[1.8rem] p-6 shadow-xl border border-burgundy-100/40 text-center flex flex-col justify-between min-h-[250px]">
+            <div class="space-y-3">
+              <h3 class="text-xl font-bold font-serif text-burgundy-950 flex items-center justify-center gap-2">
+                <span>🚜</span> Nashik Farm Sourcing
+              </h3>
+              <p class="text-xs text-charcoal-800/80 font-light leading-relaxed">
+                Raw farm-fresh onions harvested directly from local growing blocks in Dindori. Handpicked for premium
+                quality checks and pre-graded for processing.
+              </p>
+            </div>
+            <div class="pt-4">
+              <button onclick="openModal('Nashik Farm Sourcing')"
+                class="bg-[#c29143] hover:bg-[#a97b32] text-white font-bold rounded-full px-8 py-2.5 text-xs tracking-wider transition-all duration-300 hover:scale-105 inline-block shadow-md">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Sorting & Packaging Center -->
+        <div class="relative group">
+          <div
+            class="overflow-hidden rounded-[2rem] aspect-[4/3] w-full bg-burgundy-50 shadow-md border border-burgundy-100/30">
+            <img src="images/img1.webp" alt="Sorting and Packing Facility"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div
+            class="mx-6 -mt-20 relative bg-[#FFF9EA] rounded-[1.8rem] p-6 shadow-xl border border-burgundy-100/40 text-center flex flex-col justify-between min-h-[250px]">
+            <div class="space-y-3">
+              <h3 class="text-xl font-bold font-serif text-burgundy-950 flex items-center justify-center gap-2">
+                <span>🏭</span> Sorting & Packing Base
+              </h3>
+              <p class="text-xs text-charcoal-800/80 font-light leading-relaxed">
+                Hygienic sorting base where onions undergo dry-matter inspection, size grading, and packing. Handled by
+                trained professionals to ensure export standard safety.
+              </p>
+            </div>
+            <div class="pt-4">
+              <button onclick="openModal('Sorting and Packing')"
+                class="bg-[#c29143] hover:bg-[#a97b32] text-white font-bold rounded-full px-8 py-2.5 text-xs tracking-wider transition-all duration-300 hover:scale-105 inline-block shadow-md">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: Bulk Cargo Shipment Loading -->
+        <div class="relative group">
+          <div
+            class="overflow-hidden rounded-[2rem] aspect-[4/3] w-full bg-burgundy-50 shadow-md border border-burgundy-100/30">
+            <img src="images/img 2.jpg" alt="Vessel Container Loading"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div
+            class="mx-6 -mt-20 relative bg-[#FFF9EA] rounded-[1.8rem] p-6 shadow-xl border border-burgundy-100/40 text-center flex flex-col justify-between min-h-[250px]">
+            <div class="space-y-3">
+              <h3 class="text-xl font-bold font-serif text-burgundy-950 flex items-center justify-center gap-2">
+                <span>🚢</span> Bulk Container Cargo
+              </h3>
+              <p class="text-xs text-charcoal-800/80 font-light leading-relaxed">
+                Vessel-ready containers loaded carefully for global marine transport. Packed securely in ventilated
+                containers to prevent sweating and decay.
+              </p>
+            </div>
+            <div class="pt-4">
+              <button onclick="openModal('Bulk Cargo Shipment')"
+                class="bg-[#c29143] hover:bg-[#a97b32] text-white font-bold rounded-full px-8 py-2.5 text-xs tracking-wider transition-all duration-300 hover:scale-105 inline-block shadow-md">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: Quality Inspection Check -->
+        <div class="relative group">
+          <div
+            class="overflow-hidden rounded-[2rem] aspect-[4/3] w-full bg-burgundy-50 shadow-md border border-burgundy-100/30">
+            <img src="images/img.jpg" alt="Phytosanitary inspection"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div
+            class="mx-6 -mt-20 relative bg-[#FFF9EA] rounded-[1.8rem] p-6 shadow-xl border border-burgundy-100/40 text-center flex flex-col justify-between min-h-[250px]">
+            <div class="space-y-3">
+              <h3 class="text-xl font-bold font-serif text-burgundy-950 flex items-center justify-center gap-2">
+                <span>🔍</span> Sourcing Quality Check
+              </h3>
+              <p class="text-xs text-charcoal-800/80 font-light leading-relaxed">
+                Detailed phytosanitary and batch quality checks to assure compliance with international food industry
+                benchmarks and custom clearances.
+              </p>
+            </div>
+            <div class="pt-4">
+              <button onclick="openModal('Sourcing Quality Check')"
+                class="bg-[#c29143] hover:bg-[#a97b32] text-white font-bold rounded-full px-8 py-2.5 text-xs tracking-wider transition-all duration-300 hover:scale-105 inline-block shadow-md">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Quote Modal Panel -->
+  <div id="modal-container"
+    class="fixed inset-0 z-50 hidden bg-burgundy-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-8 border border-burgundy-100 shadow-2xl relative">
+      <button onclick="closeModal()"
+        class="absolute top-5 right-5 text-charcoal-800/40 hover:text-burgundy-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <div class="space-y-4 text-left">
+        <div
+          class="w-12 h-12 bg-gold-500/10 rounded-full flex items-center justify-center border border-gold-500/30 text-gold-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 id="modal-title" class="text-2xl font-bold font-serif text-burgundy-800">Request Export Quote</h3>
+        <p class="text-xs text-charcoal-800/60 leading-relaxed">Submit details, and our logistics manager will draft a
+          custom quotation with CNF/FOB shipping terms.</p>
+
+        <form id="modal-form" class="space-y-4" onsubmit="handleModalSubmit(event)">
+          <input type="hidden" id="selected-product" name="product">
+          <div>
+            <label class="block text-xs font-semibold text-charcoal-800/70 uppercase tracking-wider mb-1">Company
+              Name</label>
+            <input type="text" required
+              class="w-full px-4 py-2.5 rounded-xl border border-burgundy-200 focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm"
+              placeholder="Your Import Company Ltd">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-charcoal-800/70 uppercase tracking-wider mb-1">Target Volume
+              (Metric Tons)</label>
+            <input type="number" required min="1"
+              class="w-full px-4 py-2.5 rounded-xl border border-burgundy-200 focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm"
+              placeholder="e.g. 25">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-charcoal-800/70 uppercase tracking-wider mb-1">Port of
+              Discharge</label>
+            <input type="text" required
+              class="w-full px-4 py-2.5 rounded-xl border border-burgundy-200 focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm"
+              placeholder="e.g. Jebel Ali, Dubai">
+          </div>
+          <button type="submit"
+            class="w-full bg-burgundy-800 hover:bg-gold-500 text-white hover:text-burgundy-950 py-3.5 rounded-xl font-bold transition duration-300 shadow-md">
+            Submit Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-burgundy-950 text-white border-t border-burgundy-800/50 py-16 relative overflow-hidden">
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-gold-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute -top-24 -right-24 w-80 h-80 bg-burgundy-800/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 z-10 relative text-left">
+      <!-- Col 1: Brand -->
+      <div class="space-y-4">
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-gold-500 to-burgundy-600 rounded-full flex items-center justify-center shadow-lg text-white font-bold">
+            V</div>
+          <div class="flex flex-col">
+            <span class="font-serif font-extrabold text-base tracking-wider text-white">VIHAAN AGRO</span>
+            <span class="text-gold-500 font-bold text-[10px] tracking-widest -mt-1">OVERSEAS</span>
+          </div>
+        </div>
+        <p class="text-xs text-white/60 leading-relaxed font-light">
+          Premium Red Onion exporters based in Nashik, Maharashtra. Catering to international food industries,
+          processors, and retailers worldwide.
+        </p>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-gold-400 font-serif">Quick Links</h4>
+        <ul class="space-y-2 text-xs text-white/70">
+          <li><a href="index.html" class="hover:text-gold-400 transition duration-300">Home</a></li>
+          <li><a href="about.html" class="hover:text-gold-400 transition duration-300">About Us</a></li>
+          <li><a href="shop.html" class="hover:text-gold-400 transition duration-300">Shop</a></li>
+          <li><a href="quality.html" class="hover:text-gold-400 transition duration-300">Quality Standards</a></li>
+          <li><a href="contact.html" class="hover:text-gold-400 transition duration-300">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Trade Reg Info -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-gold-400 font-serif">Corporate Details</h4>
+        <div class="space-y-2.5 text-xs text-white/70">
+          <p><span class="text-white/40 block uppercase text-[10px] font-semibold">GSTIN Registration</span>
+            27BEHPG8089P1ZL</p>
+          <p><span class="text-white/40 block uppercase text-[10px] font-semibold">IEC Code</span> BEHPG8089P</p>
+          <p><span class="text-white/40 block uppercase text-[10px] font-semibold">Authorized Owner</span> Gatkal
+            Mangesh Raiaram</p>
+        </div>
+      </div>
+
+      <!-- Col 4: Operations Address -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-gold-400 font-serif">Headquarters</h4>
+        <div class="space-y-2.5 text-xs text-white/70">
+          <p class="leading-relaxed">
+            Gat No 188 Rajaram Jagnnalh Catkal, At Post Materewadi, Taluka Dhdori, Pimpalgaoa Bos'rant, 422209, NASHIK
+            MAHARASHTRA
+          </p>
+          <p><span class="text-white/40 uppercase text-[10px] font-semibold mr-1">Phone:</span> <a href="tel:9096886307"
+              class="hover:text-gold-400 transition duration-300">+91 9096886307</a></p>
+          <p><span class="text-white/40 uppercase text-[10px] font-semibold mr-1">Email:</span> <a
+              href="mailto:shaikhtouhid9229@gmail.com"
+              class="hover:text-gold-400 transition duration-300">shaikhtouhid9229@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom copyright bar -->
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-white/40 gap-4 z-10 relative">
+      <p>&copy; 2026 Vihaan Agro Overseas. All rights reserved.</p>
+      <p>Quality Guaranteed &bull; Nashik Red Onion Sourcing</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
